@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+}
+
+.header__bloc {
+    .header__titre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__logo {
+        width: 12%;
+    }
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: 2% auto;
+
+        & a {
+            padding: .1% 2%;
+            text-decoration: none;
+            color: black;
+            border-radius: 25px;
+        
+            &:hover {
+                transform: scale(1.1);
+                background-color: antiquewhite;
+            }
+            &.active {
+                transform: scale(1.1);
+                background-color: antiquewhite;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.banniere {
+    text-align: center;
+    .img__banniere {
+        width: 70%;
+        height: 430px;
+        margin: auto;
+        object-fit: cover;
+        border-radius: 2.5rem;
+        opacity: .85;
+    }
+}
+
+.div__presentation {
+    border: 5px solid blanchedalmond;
+    border-radius: 20px;
+    margin: 10% 5%;
+    padding: 1% 3%;
+    & h2 {
+        text-align: center;
+    }
+
+    .flex__presentation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .p__presentation {
+            width: 49%;
+        }
+
+        .divImg__presentation {
+            width: 48%;
+
+            .img__presentation {
+                width: 100%;
+                height: 300px;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+.div__sommaire {
+    border: 5px solid darkturquoise;
+    border-radius: 20px;
+    margin: 10% 5%;
+    padding: 1%;
+    & h2 {
+        text-align: center;
+    }
+
+    .sommaire__flex {
+        display: flex;
+    
+        .item__sommaire {
+            border: 2px solid turquoise;
+            border-radius: 15px;
+            width: 45%;
+            padding: 1%;
+            margin: 1%;
+            & a {
+                text-decoration: none;
+                color: black;
+            }
+            & img {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+            }
+            & h3 {
+                text-align: center;
+            }
+        }
+        .item__sommaire:hover {
+            transform: scale(1.05);            
+        }
+    }
+
+    .contact__sommaire {
+        text-align: center;
+        
+        .btn__sommaire {
+            padding: .5% 1%;
+            border: 3px solid turquoise;
+            border-radius: 8px;
+            background-color: transparent;
+            & a {
+                text-decoration: none;
+                color: black;
+            }
+            &:hover {
+                transform: scale(1.1);
+                border: 3px solid transparent;
+                background: darkturquoise;
+            }
+        }
+    }
+}
+
+.bloc__footer {
+    padding: 1%;
+    text-align: center;
+    background: papayawhip;
+    & h4 {
+        font-size: 20px;
+    }
+
+    .liens__footer {
+        width: 25%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        & a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+.spots {
+    .banner__spots {
+        text-align: center;
+    
+        .imgBanner__spots {
+            width: 70%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 2.5rem;
+        }
+    }
+
+    .grid__spots {
+        width: 85%;
+        margin: 3% auto;
+        padding: 0 3%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: #efefef;
+        border-radius: 40px;
+
+        .card__spot {
+            width: 30%;
+            height: 315px;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 1px 0px 10px 4px #aeaeae;
+            border-radius: 25px;
+            margin: 4% 0;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            & img {
+                width: 100%;
+                height: 256px;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+        }
+    }
+}
+
+.form_contact {
+    background-image: url("https://img.freepik.com/photos-gratuite/vue-dessus-essentiels-peche-feuille-papier_23-2148429489.jpg?w=996&t=st=1678490250~exp=1678490850~hmac=ff8a2e9949cfd4259b3cf62ebf20c2092ef3041c1a1783d0a9cb24eb9d2123c4");
+    background-size: 100%;
+    text-align: center;
+    height: 600px;
+    background-position: center;
+    margin: 2% 0;
+
+    .title_form {
+        padding-top: 8%;
+        margin-left: 25%;
+    }
+
+    .form {
+        .input_form {
+            display: flex;
+            flex-direction: column;
+            width: 18%;
+            margin-left: 54%;
+            padding-top: 2%;
+
+            & input {
+                margin-bottom: 10%;
+                padding: 5%;
+            }
+        }
+
+        .message_form {
+            margin-left: 26%;
+            margin-bottom: 2%;
+
+            & textarea {
+                max-width: 242px;
+                width: 242px;
+                padding: 1.3%;
+            }
+        }
+
+        .input_submit {
+            margin-left: 26%;
+            padding: 1% 3%;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .border_input_form {
+            border-radius: 20px;
+            background-color: #FFEFD5;
+            
+            &:hover {
+                background-color: #F9D0A4;
+            }
+        }
+    }
+}
+
+.bloc_checklists {
+    text-align: center;
+
+    & h1 {
+        margin: auto;
+        margin-top: 5%;
+        border-bottom: 1px solid black;
+        width: 52%;
+    }
+    .checklist_title_text {
+        font-style: italic;
+    }
+
+    .checklists_banner {
+        text-align: center;
+    
+        .checklists_banner_img {
+            width: 70%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 2.5rem;
+        }
+    }
+
+    .checklists_flex {
+        display: flex;
+        justify-content: space-between;
+        margin: 5%;
+
+        .checklist {
+            width: 45%;
+            border-radius: 25px;
+            text-align: center;
+            color: #CD595E;
+            background-color: #ffffff;
+            box-shadow: 1px 0px 10px 4px #aeaeae;
+
+            & img {
+                width: 100%;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+
+            & h2 {
+                padding: 2%;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

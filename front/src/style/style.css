@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+}
+
+.header__bloc .header__titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__bloc .header__logo {
+  width: 12%;
+}
+.header__bloc .header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 2% auto;
+}
+.header__bloc .header__nav a {
+  padding: 0.1% 2%;
+  text-decoration: none;
+  color: black;
+  border-radius: 25px;
+}
+.header__bloc .header__nav a:hover {
+  transform: scale(1.1);
+  background-color: antiquewhite;
+}
+.header__bloc .header__nav a.active {
+  transform: scale(1.1);
+  background-color: antiquewhite;
+  font-style: italic;
+}
+
+.banniere {
+  text-align: center;
+}
+.banniere .img__banniere {
+  width: 70%;
+  height: 430px;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2.5rem;
+  opacity: 0.85;
+}
+
+.div__presentation {
+  border: 5px solid blanchedalmond;
+  border-radius: 20px;
+  margin: 10% 5%;
+  padding: 1% 3%;
+}
+.div__presentation h2 {
+  text-align: center;
+}
+.div__presentation .flex__presentation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.div__presentation .flex__presentation .p__presentation {
+  width: 49%;
+}
+.div__presentation .flex__presentation .divImg__presentation {
+  width: 48%;
+}
+.div__presentation .flex__presentation .divImg__presentation .img__presentation {
+  width: 100%;
+  height: 300px;
+  border-radius: 50px;
+}
+
+.div__sommaire {
+  border: 5px solid darkturquoise;
+  border-radius: 20px;
+  margin: 10% 5%;
+  padding: 1%;
+}
+.div__sommaire h2 {
+  text-align: center;
+}
+.div__sommaire .sommaire__flex {
+  display: flex;
+}
+.div__sommaire .sommaire__flex .item__sommaire {
+  border: 2px solid turquoise;
+  border-radius: 15px;
+  width: 45%;
+  padding: 1%;
+  margin: 1%;
+}
+.div__sommaire .sommaire__flex .item__sommaire a {
+  text-decoration: none;
+  color: black;
+}
+.div__sommaire .sommaire__flex .item__sommaire img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.div__sommaire .sommaire__flex .item__sommaire h3 {
+  text-align: center;
+}
+.div__sommaire .sommaire__flex .item__sommaire:hover {
+  transform: scale(1.05);
+}
+.div__sommaire .contact__sommaire {
+  text-align: center;
+}
+.div__sommaire .contact__sommaire .btn__sommaire {
+  padding: 0.5% 1%;
+  border: 3px solid turquoise;
+  border-radius: 8px;
+  background-color: transparent;
+}
+.div__sommaire .contact__sommaire .btn__sommaire a {
+  text-decoration: none;
+  color: black;
+}
+.div__sommaire .contact__sommaire .btn__sommaire:hover {
+  transform: scale(1.1);
+  border: 3px solid transparent;
+  background: darkturquoise;
+}
+
+.bloc__footer {
+  padding: 1%;
+  text-align: center;
+  background: papayawhip;
+}
+.bloc__footer h4 {
+  font-size: 20px;
+}
+.bloc__footer .liens__footer {
+  width: 25%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.bloc__footer .liens__footer a {
+  text-decoration: none;
+  color: black;
+}
+.bloc__footer .liens__footer a:hover {
+  font-size: 1.2em;
+}
+
+.spots .banner__spots {
+  text-align: center;
+}
+.spots .banner__spots .imgBanner__spots {
+  width: 70%;
+  height: 430px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2.5rem;
+}
+.spots .grid__spots {
+  width: 85%;
+  margin: 3% auto;
+  padding: 0 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #efefef;
+  border-radius: 40px;
+}
+.spots .grid__spots .card__spot {
+  width: 30%;
+  height: 315px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 1px 0px 10px 4px #aeaeae;
+  border-radius: 25px;
+  margin: 4% 0;
+  cursor: pointer;
+}
+.spots .grid__spots .card__spot:hover {
+  transform: scale(1.05);
+}
+.spots .grid__spots .card__spot img {
+  width: 100%;
+  height: 256px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.form_contact {
+  background-image: url("https://img.freepik.com/photos-gratuite/vue-dessus-essentiels-peche-feuille-papier_23-2148429489.jpg?w=996&t=st=1678490250~exp=1678490850~hmac=ff8a2e9949cfd4259b3cf62ebf20c2092ef3041c1a1783d0a9cb24eb9d2123c4");
+  background-size: 100%;
+  text-align: center;
+  height: 600px;
+  background-position: center;
+  margin: 2% 0;
+}
+.form_contact .title_form {
+  padding-top: 8%;
+  margin-left: 25%;
+}
+.form_contact .form .input_form {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  margin-left: 54%;
+  padding-top: 2%;
+}
+.form_contact .form .input_form input {
+  margin-bottom: 10%;
+  padding: 5%;
+}
+.form_contact .form .message_form {
+  margin-left: 26%;
+  margin-bottom: 2%;
+}
+.form_contact .form .message_form textarea {
+  max-width: 242px;
+  width: 242px;
+  padding: 1.3%;
+}
+.form_contact .form .input_submit {
+  margin-left: 26%;
+  padding: 1% 3%;
+  cursor: pointer;
+}
+.form_contact .form .input_submit:hover {
+  transform: scale(1.1);
+}
+.form_contact .form .border_input_form {
+  border-radius: 20px;
+  background-color: #FFEFD5;
+}
+.form_contact .form .border_input_form:hover {
+  background-color: #F9D0A4;
+}
+
+.bloc_checklists {
+  text-align: center;
+}
+.bloc_checklists h1 {
+  margin: auto;
+  margin-top: 5%;
+  border-bottom: 1px solid black;
+  width: 52%;
+}
+.bloc_checklists .checklist_title_text {
+  font-style: italic;
+}
+.bloc_checklists .checklists_banner {
+  text-align: center;
+}
+.bloc_checklists .checklists_banner .checklists_banner_img {
+  width: 70%;
+  height: 430px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2.5rem;
+}
+.bloc_checklists .checklists_flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+.bloc_checklists .checklists_flex .checklist {
+  width: 45%;
+  border-radius: 25px;
+  text-align: center;
+  color: #CD595E;
+  background-color: #ffffff;
+  box-shadow: 1px 0px 10px 4px #aeaeae;
+}
+.bloc_checklists .checklists_flex .checklist img {
+  width: 100%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.bloc_checklists .checklists_flex .checklist h2 {
+  padding: 2%;
+}
+.bloc_checklists .checklists_flex .checklist:hover {
+  transform: scale(1.05);
+}/*# sourceMappingURL=style.css.map */
