@@ -1,0 +1,58 @@
+[
+    {
+        "brand": "TEAM CARPFISHING",
+        "picture": "https://img.freepik.com/photos-gratuite/s-attaquer-herbe_1161-340.jpg?w=996&t=st=1678661867~exp=1678662467~hmac=0f20bc9fae9ed058a362b6032a9fb7f0169399b0e8a66c0352b83a1dc1ef0be2",
+        "name": "La canne à pêche",
+        "shop": "Pacific pêche",
+        "price": "75€"
+    },
+    {
+        "brand": "MACK2",
+        "picture": "https://img.freepik.com/photos-gratuite/homme-pechant-riviere_23-2148204048.jpg?w=996&t=st=1678662094~exp=1678662694~hmac=31f608c190f2c1e02cddd2d6556fd67643746f98c6978ffaa1b648c9c6597c58",
+        "name": "Le moulinet",
+        "shop": "Pêche promo",
+        "price": "50€"
+    },
+    {
+        "brand": "MITCHELL",
+        "picture": "https://www.pacificpeche.com/dw/image/v2/BFMQ_PRD/on/demandware.static/-/Sites-pp-master-catalog/default/dwd4cd321f/images/1/1/9/119003-b.jpg?sw=800&sh=800",
+        "name": "Bagagerie",
+        "shop": "Chrono pêche",
+        "price": "120€"
+    },
+    {
+        "brand": "SERT",
+        "picture": "https://www.pacificpeche.com/dw/image/v2/BFMQ_PRD/on/demandware.static/-/Sites-pp-master-catalog/default/dwf6656d42/images/1/5/3/153923-a.jpg?sw=800&sh=800",
+        "name": "Biwy",
+        "shop": "Décathlon",
+        "price": "350€"
+    },
+    {
+        "brand": "KORDA",
+        "picture": "https://www.pacificpeche.com/dw/image/v2/BFMQ_PRD/on/demandware.static/-/Sites-pp-master-catalog/default/dw4009ddbd/images/1/4/4/144444-a.jpg?sw=800&sh=800",
+        "name": "Tapis de réception",
+        "shop": "Amazon",
+        "price": "130€"
+    },
+    {
+        "brand": "EXTRA CARP",
+        "picture": "https://www.pacificpeche.com/dw/image/v2/BFMQ_PRD/on/demandware.static/-/Sites-pp-master-catalog/default/dwed10701a/images/1/5/7/157704-a.jpg?sw=800&sh=800",
+        "name": "Détecteurs + centrale",
+        "shop": "Ali Express",
+        "price": "250€"
+    },
+    {
+        "brand": "WYCHWOOD",
+        "picture": "https://www.pacificpeche.com/dw/image/v2/BFMQ_PRD/on/demandware.static/-/Sites-pp-master-catalog/default/dw0730203d/images/1/4/9/149953-a.jpg?sw=800&sh=800",
+        "name": "Bateau amorceur",
+        "shop": "Méga pêche",
+        "price": "500€"
+    },
+    {
+        "brand": "ANACONDA",
+        "picture": "https://www.pacificpeche.com/dw/image/v2/BFMQ_PRD/on/demandware.static/-/Sites-pp-master-catalog/default/dw64ab084d/images/1/3/7/137148-a.jpg?sw=800&sh=800",
+        "name": "Bedchair",
+        "shop": "Pêcheur.com",
+        "price": "180€"
+    }
+]
