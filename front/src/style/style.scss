@@ -176,21 +176,26 @@ body {
     .grid__spots {
         width: 85%;
         margin: 3% auto;
-        padding: 0 3%;
+        padding: 2% 3%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         background-color: #efefef;
         border-radius: 40px;
 
-        .card__spot {
+        & a {
             width: 30%;
-            height: 315px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .card__spot {
             text-align: center;
             background-color: #ffffff;
             box-shadow: 1px 0px 10px 4px #aeaeae;
             border-radius: 25px;
             margin: 4% 0;
+            padding-top: .5%;
             cursor: pointer;
 
             &:hover {
@@ -318,4 +323,41 @@ body {
             }
         }
     }
+}
+
+.grid__shopping {
+    width: 85%;
+    margin: 3% auto;
+    padding: 2% 3%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 40px;
+
+        & a {
+            width: 30%;
+            text-decoration: none;
+            color: black;
+        }
+
+        .card__shopping {
+            background-color: #FFEFD5;
+            box-shadow: 1px 0px 10px 4px #aeaeae;
+            border-radius: 25px;
+            margin: 4% 0;
+            padding-top: .5%;
+            width: 30%;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            & img {
+                width: 100%;
+                height: 256px;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+            }
+        }
 }

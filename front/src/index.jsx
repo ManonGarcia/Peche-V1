@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { Home } from "./Pages/Home";
 import Spots from "./Pages/Spots";
+import CardShopping from "./Pages/Sales"; 
 import Contact from "./Pages/Contact";
 import { Header } from "./Layout/Header/header";
 import Footer from "./Layout/Footer/footer";
@@ -33,6 +34,10 @@ const Router = createBrowserRouter([
                 element: <Spots/>,
             },
             {
+                path: "/coins-sympas/:id",
+                // element: <Spot/>
+            },
+            {
                 path: "/checklists",
                 element: <Checklists />,
             },
@@ -46,7 +51,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/articles-vedettes",
-                // element: <About />,
+                element: <CardShopping />,
             },
             {
                 path: "/contact",

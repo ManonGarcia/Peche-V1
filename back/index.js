@@ -4,6 +4,7 @@ const port = 3001;
 const panel = require('./data/descriptionPanel.json');
 const whatelse = require('./data/whatElsePanel.json');
 const spots = require('./data/spotsFishing.json');
+const shopping = require('./data/shoppingItems.json')
 const cors = require('cors');
 
 app.use(cors());
@@ -18,6 +19,10 @@ app.get('/whatelse', (req, res) => {
 
 app.get('/spots', (req, res) => {
     res.send(spots)
+});
+
+app.get('/shopping', (req, res) => {
+    res.send(shopping)
 });
 
 app.listen(port, () => {

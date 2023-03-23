@@ -1,50 +1,263 @@
 [
     {
-        "name": "Etang de Brossolette",
-        "picture": "https://img.freepik.com/photos-gratuite/jetee-au-bord-lac-hallstatt-autriche_181624-44201.jpg?w=996&t=st=1678399451~exp=1678400051~hmac=7dc37562d9c3cebc3fe93d0309f030c8321aec2ba3fa56475096ece7a438cd09"
+        "id": "c7b2r8",
+        "name": "Lac de Chemillé-sur-Indrois",
+        "picture": "https://img.freepik.com/photos-gratuite/jetee-au-bord-lac-hallstatt-autriche_181624-44201.jpg?w=996&t=st=1678399451~exp=1678400051~hmac=7dc37562d9c3cebc3fe93d0309f030c8321aec2ba3fa56475096ece7a438cd09",
+        "location": "CHEMILLE-SUR-INDROIS 37460",
+        "management": "conjointement assurée par la FDAAPPMA37 et l'AAPPMA du Montrésorois.",
+        "size": "35 ha",
+        "numberOfPosts": "11 postes de nuit.",
+        "population": [
+            "CARPE",
+            "BROCHET",
+            "GARDON",
+            "BREME"
+        ],
+        "opening": "Pêche des carnassiers interdite : pour le Brochet du 30 janvier au 28 avril, pour le Sandre/Black-bass du 12 mars au 2 juin.",
+        "price": "",
+        "regulation": [
+            "Carte de pêche obligatoire.",
+            "Pêche 2ème catégorie.",
+            "Pêche de nuit autorisée pour la carpe.",
+            "Moteur électrique autorisé, moteur thermique interdit.",
+            "Les embarcations et bateaux amorceurs sont interdits toute l'année pour la pose des lignes et l'amorçage.",
+            "Sac de conservation interdit.",
+            "Pelle US obligatoire.",
+            "Les chiens seront tenus en laisse.",
+            "Camping interdit - bivouacs autorisés uniquement dans la zone de pêche de nuit."
+        ]
     },
     {
-        "name": "Rivière de la Moutonnerie",
-        "picture": "https://img.freepik.com/photos-gratuite/tir-couper-souffle-ocean-collines-enneigees-cotes-belle-scene-coucher-soleil_181624-5475.jpg?w=996&t=st=1678400842~exp=1678401442~hmac=4fee28fb1bbcdf0e69433f096317b333c93daf29cb65e932e7412ff8d112113e"
+        "id": "t9g5h3",
+        "name": "Étangs de Brosse",
+        "picture": "https://img.freepik.com/photos-gratuite/tir-couper-souffle-ocean-collines-enneigees-cotes-belle-scene-coucher-soleil_181624-5475.jpg?w=996&t=st=1678400842~exp=1678401442~hmac=4fee28fb1bbcdf0e69433f096317b333c93daf29cb65e932e7412ff8d112113e",
+        "location": "LUZILLE 37150",
+        "management": "privée.",
+        "size": "44.4 ha",
+        "numberOfPosts": "5 postes.",
+        "population": [
+            "CARPE",
+            "GARDON",
+            "BROCHET",
+            "AMOUR BLANC"
+        ],
+        "opening": "Ouvert toute l'année.",
+        "price": "25€ les 24h",
+        "regulation": [
+            "Bateaux autorisés.",
+            "Hameçon sans ardillon (ou ardillon écrasé) obligatoire.",
+            "Tresse interdite sur le moulinet ou en tête de ligne.",
+            "3 cannes maximum en batterie.",
+            "NO KILL obligatoire."
+        ]
     },
     {
-        "name": "Lac du Connemara",
-        "picture": "https://img.freepik.com/photos-gratuite/pont-bois-ile-koh-nangyuan-surat-thani-thailande_335224-1082.jpg?w=996&t=st=1678400812~exp=1678401412~hmac=6ee23dbaa544995c65f38f254934422ee4d192d85df74e2bb27ac795e558dfbc"
+        "id": "x2c5f3",
+        "name": "La Moutonnerie",
+        "picture": "https://img.freepik.com/photos-gratuite/pont-bois-ile-koh-nangyuan-surat-thani-thailande_335224-1082.jpg?w=996&t=st=1678400812~exp=1678401412~hmac=6ee23dbaa544995c65f38f254934422ee4d192d85df74e2bb27ac795e558dfbc",
+        "location": "AMBOISE 37400",
+        "management": "assurée par la AAPPMA.",
+        "size": "N.C",
+        "numberOfPosts": "",
+        "population": [
+            "CARPE",
+            "BROCHET",
+            "SANDRE",
+            "BLACK-BASS",
+            "POISSONS BLANCS"
+        ],
+        "opening": "Pêche autorisée tous les jours du 25 mars au 31 décembre. Pour les carnassiers, pêche autorisée du 1er au 29 janvier et du 3 juin au 31 décembre",
+        "price": "",
+        "regulation": [
+            "Carte de pêche obligatoire.",
+            "3 cannes au maximum dont une seule pour le carnassier.",
+            "Bourriche uniquement pour la friture. Friture sans limitation.",
+            "Véhicules interdits autour du plan d'eau.",
+            "Feux interdits et barbecues.",
+            "Les chiens seront tenus en laisse.",
+            "",
+            "Pour les carnassiers (NO KILL) :",
+            "1 canne.",
+            "Pêche aux leurres uniquement, vif et poisson mort interdits.",
+            "Hameçon sans ardillon (ou ardillon écrasé) obligatoire.",
+            "Bâteau et Float-tube interdits.",
+            "",
+            "Pour la carpe (NO KILL) :",
+            "3 cannes maximum en batterie",
+            "Dépose des lignes et amorçage à l'aide d'engin télécommandé ou d'une embarcation interdits.",
+            "Tresse interdite sur le moulinet ou en tête de ligne.",
+            "Tapis de réception et hameçon sans ardillon(ou ardillon écrasé) obligatoires."
+        ]
     },
     {
-        "name": "Océan d'Espadrille",
-        "picture": "https://img.freepik.com/photos-gratuite/lac-entre-montagnes_1112-544.jpg?w=1060&t=st=1678400870~exp=1678401470~hmac=568b5ec91902728bffe006a0878131b073a9b594ec5d0d4c9daa89d34fbd7451"
+        "id": "a4m6i1",
+        "name": "Lac des 3 provinces",
+        "picture": "https://img.freepik.com/photos-gratuite/lac-entre-montagnes_1112-544.jpg?w=1060&t=st=1678400870~exp=1678401470~hmac=568b5ec91902728bffe006a0878131b073a9b594ec5d0d4c9daa89d34fbd7451",
+        "location": "SEIGY 41140",
+        "management": "assurée par la AAPPMA.",
+        "size": "40ha",
+        "numberOfPosts": "6 postes de nuit.",
+        "population": [
+            "BLACK-BASS",
+            "BROCHET",
+            "SANDRE",
+            "PERCHE",
+            "SILURE",
+            "GARDON",
+            "CARASSIN",
+            "TANCHE",
+            "BREME",
+            "ABLETTE",
+            "GOUJON",
+            "CHEVESNE"
+        ],
+        "opening": "Ouvert toute l'année.",
+        "price": "",
+        "regulation": [
+            "Pêche 2ème catégorie.",
+            "Bateaux autorisés.",
+            "4 cannes maximum en batterie.",
+            "Pêche de nuit autorisée pour la carpe.",
+            "Baignade interdite.",
+            "Feux interdits et barbecues."
+        ]
     },
     {
-        "name": "Mer de la Loire",
-        "picture": "https://img.freepik.com/photos-gratuite/prise-vue-grand-angle-du-lac-hallstatt-entoure-hautes-montagnes-rocheuses-autriche_181624-15715.jpg?w=996&t=st=1678400860~exp=1678401460~hmac=16f14245334be2b27bdd30f5f4b3fafdfbeab46393465c1c59485b870108377b"
+        "id": "n4h6g5",
+        "name": "L'étang des roseaux",
+        "picture": "https://img.freepik.com/photos-gratuite/prise-vue-grand-angle-du-lac-hallstatt-entoure-hautes-montagnes-rocheuses-autriche_181624-15715.jpg?w=996&t=st=1678400860~exp=1678401460~hmac=16f14245334be2b27bdd30f5f4b3fafdfbeab46393465c1c59485b870108377b",
+        "location": "LE LOUROUX 37240",
+        "management": "privé.",
+        "size": "52 ha",
+        "numberOfPosts": "",
+        "population": [
+            "BROCHET",
+            "SANDRE",
+            "CARPE"
+        ],
+        "opening": "Ouvert du 1er mai au 29 septembre. Pêche nocturne interdite.",
+        "price": "6€ la journée.",
+        "regulation": [
+            "NO KILL obligatoire.",
+            "Feux interdits et barbecues.",
+            "Baignade interdite.",
+            "3 cannes maximum en batterie.",
+            "Bâteau et Float-tube interdits."
+        ]
     },
     {
-        "name": "Fleuve Océanique",
-        "picture": "https://img.freepik.com/photos-gratuite/calanque_268835-3233.jpg?w=996&t=st=1678400814~exp=1678401414~hmac=d4ffcbeae79abe94b93aca483905eaa1c2d6ec24bfd25e827a95ed87125a011f"
+        "id": "d8y7v2",
+        "name": "Plan d'eau de l'Arche",
+        "picture": "https://img.freepik.com/photos-gratuite/calanque_268835-3233.jpg?w=996&t=st=1678400814~exp=1678401414~hmac=d4ffcbeae79abe94b93aca483905eaa1c2d6ec24bfd25e827a95ed87125a011f",
+        "location": "MONNAIE 37380",
+        "management": "privée.",
+        "size": "1ha",
+        "numberOfPosts": "6 postes.",
+        "population": [
+            "CARPE",
+            "TANCHE",
+            "GARDON"
+        ],
+        "opening": "Ouvert toute l'année.",
+        "price": "7€ la journée. 10€ les 24h.",
+        "regulation": [
+            "4 cannes maximum en batterie.",
+            "Pêche 2ème catégorie.",
+            "NO KILL obligatoire.",
+            "Pêche de nuit autorisée pour la carpe."
+        ]
     },
     {
-        "name": "Ruisseau du Mordor",
-        "picture": "https://img.freepik.com/photos-gratuite/belle-photo-lac-pres-montagnes-entoure-arbres-personnes_181624-16057.jpg?w=996&t=st=1678400807~exp=1678401407~hmac=974ba899e043cafc95b469ce43c3c35b6e7f1c29d8525a0052db55677b382103"
+        "id": "f7q3x5",
+        "name": "Lac de la Bergeonnerie",
+        "picture": "https://img.freepik.com/photos-gratuite/belle-photo-lac-pres-montagnes-entoure-arbres-personnes_181624-16057.jpg?w=996&t=st=1678400807~exp=1678401407~hmac=974ba899e043cafc95b469ce43c3c35b6e7f1c29d8525a0052db55677b382103",
+        "location": "",
+        "management": "privée.",
+        "size": "",
+        "numberOfPosts": "",
+        "population": [
+            "CARPE"
+        ],
+        "opening": "Ouvert toute l'année.",
+        "price": "",
+        "regulation": ""
     },
     {
-        "name": "Cour d'eau des Montagnes",
-        "picture": "https://img.freepik.com/photos-gratuite/calanques-port-pin-cassis-france-pres-marseille_268835-884.jpg?w=996&t=st=1678400809~exp=1678401409~hmac=631384a4cb5d763c10524c8df575e5aaedc3f71e6cbd5b08c2267f701766e255"
+        "id": "w6j7p2",
+        "name": "Etang de la Frayère",
+        "picture": "https://img.freepik.com/photos-gratuite/calanques-port-pin-cassis-france-pres-marseille_268835-884.jpg?w=996&t=st=1678400809~exp=1678401409~hmac=631384a4cb5d763c10524c8df575e5aaedc3f71e6cbd5b08c2267f701766e255",
+        "location": "PARCAY-SUR-VIENNE 37220",
+        "management": "privée.",
+        "size": "2ha",
+        "numberOfPosts": "4 postes.",
+        "population": [
+            "CARPE"
+        ],
+        "opening": "Ouvert du 15 mars au 31 octobre. Pêche de nuit autorisée",
+        "price": "25€ les 24h.",
+        "regulation": [
+            "Feux interdits - Barbecues autorisés.",
+            "Tapis de réception XXL ou baignoire et hameçon sans ardillon(ou ardillon écrasé) obligatoires.",
+            "Tresse interdite sur le moulinet ou en tête de ligne.",
+            "Remise à l'eau immédiate obligatoire.",
+            "Amorçage du bord. Les embarcations et bateaux amorceur sont interdits.",
+            "Bivouac camouflage obligatoire pour se fondre dans la nature.",
+            "Détecteurs de touches obligatoires.",
+            "Une paire de waders par poste obligatoire.",
+            "Canon à bouillettes interdit."
+        ]
     },
     {
-        "name": "Flaque de Mandragore",
-        "picture": "https://img.freepik.com/photos-gratuite/beau-tir-lac-cristallin-cote-base-montagne-enneigee-au-cours-journee-ensoleillee_181624-5459.jpg?w=996&t=st=1678400823~exp=1678401423~hmac=fb09d5398c7e4e0c9465b88d0cd3cc21e32012790ef1904eb712c08dc41f8840"
+        "id": "t8g3f9",
+        "name": "L'île perchette",
+        "picture": "https://img.freepik.com/photos-gratuite/beau-tir-lac-cristallin-cote-base-montagne-enneigee-au-cours-journee-ensoleillee_181624-5459.jpg?w=996&t=st=1678400823~exp=1678401423~hmac=fb09d5398c7e4e0c9465b88d0cd3cc21e32012790ef1904eb712c08dc41f8840",
+        "location": "NOIZAY 37210",
+        "management": "",
+        "size": "24ha",
+        "numberOfPosts": "11 postes.",
+        "population": [
+            "BROCHET",
+            "SANDRE",
+            "CARPE",
+            "CARASSIN",
+            "GARDON"
+        ],
+        "opening": "Ouvert toute l'année.",
+        "price": "",
+        "regulation": [
+            "Carte de pêche obligatoire.",
+            "Les embarcations et bateaux sont interdits.",
+            "Pêche 2ème catégorie."
+        ]
     },
     {
-        "name": "Goutte de sécheresse",
-        "picture": "https://img.freepik.com/photos-gratuite/lac-entoure-rochers-foret-arbres-se-refletant-eau-sous-ciel-bleu-italie_181624-15167.jpg?w=996&t=st=1678400831~exp=1678401431~hmac=f5eef3129e1e71165f8514fc84787edc3dd0eb6b09a7b5c8d424c63187bbc0f1"
-    },
-    {
-        "name": "Cascade des chutes",
-        "picture": "https://img.freepik.com/photos-gratuite/cascade-bateau-propre-chine-naturel-rural_1417-1356.jpg?w=996&t=st=1678400847~exp=1678401447~hmac=da94c75de4a8f69ec40767c9abd074983e306fc8e8e3bdc206ce980b9b385767"
-    },
-    {
-        "name": "Tsunami des amis",
-        "picture": "https://img.freepik.com/photos-gratuite/ile-rocheuse-pres-plage-belle-mer-au-coucher-du-soleil_181624-5076.jpg?w=996&t=st=1678401113~exp=1678401713~hmac=1f37c41ab73a4b8431d5eaeb44a6312f6268adb5f4063321d783d3e196052425"
+        "id": "d7q9j1",
+        "name": "Etang des héronnières",
+        "picture": "https://img.freepik.com/photos-gratuite/lac-entoure-rochers-foret-arbres-se-refletant-eau-sous-ciel-bleu-italie_181624-15167.jpg?w=996&t=st=1678400831~exp=1678401431~hmac=f5eef3129e1e71165f8514fc84787edc3dd0eb6b09a7b5c8d424c63187bbc0f1",
+        "location": "AUTRECHE 37110",
+        "management": "privée.",
+        "size": "7,5ha",
+        "numberOfPosts": "18 postes",
+        "population": [
+            "ESTURGEON",
+            "CARPE",
+            "CARPE KOI",
+            "AMOUR BLANC"
+        ],
+        "opening": "Ouvert toute l'année.",
+        "price": "20€ les 24h",
+        "regulation": [
+            "NO KILL obligatoire.",
+            "1 pêcheur par poste.",
+            "3 cannes maximum en batterie.",
+            "Tapis de réception, détecteurs et épuisette obligatoires.",
+            "Hameçon sans ardillon (ou ardillon écrasé) obligatoire.",
+            "Remise à l'eau immédiate obligatoire.",
+            "Les embarcations et bateaux sont interdits.",
+            "Feux interdits - Barbecues autorisés.",
+            "Apats vivants interdit",
+            "Amorçage lourd interdit.",
+            "Sac de conservation interdit."
+        ]
     }
 ]

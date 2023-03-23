@@ -162,21 +162,25 @@ body {
 .spots .grid__spots {
   width: 85%;
   margin: 3% auto;
-  padding: 0 3%;
+  padding: 2% 3%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: #efefef;
   border-radius: 40px;
 }
-.spots .grid__spots .card__spot {
+.spots .grid__spots a {
   width: 30%;
-  height: 315px;
+  text-decoration: none;
+  color: black;
+}
+.spots .grid__spots .card__spot {
   text-align: center;
   background-color: #ffffff;
   box-shadow: 1px 0px 10px 4px #aeaeae;
   border-radius: 25px;
   margin: 4% 0;
+  padding-top: 0.5%;
   cursor: pointer;
 }
 .spots .grid__spots .card__spot:hover {
@@ -282,4 +286,37 @@ body {
 }
 .bloc_checklists .checklists_flex .checklist:hover {
   transform: scale(1.05);
+}
+
+.grid__shopping {
+  width: 85%;
+  margin: 3% auto;
+  padding: 2% 3%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 40px;
+}
+.grid__shopping a {
+  width: 30%;
+  text-decoration: none;
+  color: black;
+}
+.grid__shopping .card__shopping {
+  background-color: #FFEFD5;
+  box-shadow: 1px 0px 10px 4px #aeaeae;
+  border-radius: 25px;
+  margin: 4% 0;
+  padding-top: 0.5%;
+  width: 30%;
+  cursor: pointer;
+}
+.grid__shopping .card__shopping:hover {
+  transform: scale(1.05);
+}
+.grid__shopping .card__shopping img {
+  width: 100%;
+  height: 256px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }/*# sourceMappingURL=style.css.map */
