@@ -8,7 +8,7 @@ import { Header } from "./Layout/Header/header";
 import Footer from "./Layout/Footer/footer";
 import Checklists from "./Pages/Checklists";
 // import Error from "./components/Error";
-import "./utils/style/style.css";
+import "./style/style.css";
 
 const MainTemplate = () => {
     return (
