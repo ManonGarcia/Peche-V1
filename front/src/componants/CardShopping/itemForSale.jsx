@@ -5,8 +5,8 @@ function ItemForSale(props) {
         <div className="card__shopping">
             <img src={props.imgUrl} alt="" />
             <div className="card__shopping__text">
-                <p className="card__shopping__brand">{props.brand}</p>
-                <h3>{props.name}</h3>
+                <h3 className="card__shopping__brand">{props.brand}</h3>
+                <h4>{props.name}</h4>
                 <p>{props.shop} : {props.price}</p>
             </div>
         </div>

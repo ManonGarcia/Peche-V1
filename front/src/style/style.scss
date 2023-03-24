@@ -325,39 +325,74 @@ body {
     }
 }
 
-.grid__shopping {
-    width: 85%;
-    margin: 3% auto;
-    padding: 2% 3%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    border-radius: 40px;
+.shopping {
+    .banner__shopping {
+        background-image: url("https://img.freepik.com/photos-gratuite/articles-peche-peche-filature-ligne-peche-crochets-leurres-fond-bois_639032-1829.jpg?w=900&t=st=1679693640~exp=1679694240~hmac=b78148709dd4d6daae018acfac0c615acdbd8483c461d4a85fa86347e75144ff");
+        width: 70%;
+        height: 430px;
+        background-size: cover;
+        border-radius: 2.5rem;
+        background-repeat: no-repeat;
+        text-align: center;
+        margin: auto;
 
-        & a {
-            width: 30%;
-            text-decoration: none;
-            color: black;
+        & h1 {
+            font-size: 56px;
+            padding: 17% 10% 0 0;
+            color: white;
         }
+    }
 
-        .card__shopping {
-            background-color: #FFEFD5;
-            box-shadow: 1px 0px 10px 4px #aeaeae;
-            border-radius: 25px;
-            margin: 4% 0;
-            padding-top: .5%;
-            width: 30%;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.05);
+    .grid__shopping {
+        width: 85%;
+        margin: 3% auto;
+        padding: 2% 3%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        border-radius: 40px;
+    
+            & a {
+                width: 30%;
+                text-decoration: none;
+                color: black;
             }
-
-            & img {
-                width: 100%;
-                height: 256px;
-                border-top-left-radius: 25px;
-                border-top-right-radius: 25px;
+    
+            .card__shopping {
+                background-color: #FFEFD5;
+                box-shadow: 1px 0px 10px 4px #aeaeae;
+                border-radius: 25px;
+                margin: 4% 0;
+                padding-top: .5%;
+                width: 30%;
+                cursor: pointer;
+    
+                &:hover {
+                    transform: scale(1.05);
+                }
+    
+                & img {
+                    width: 100%;
+                    height: 256px;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                }
+    
+                .card__shopping__text {
+                    padding: 2% 5%;
+    
+                    & h3, h4, p {
+                        margin: 3% 0;
+                    }
+    
+                    & p {
+                        text-decoration: underline;
+    
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
-        }
+    }
 }
