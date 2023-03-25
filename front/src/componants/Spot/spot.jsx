@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import Error from "../../components/Error";
 import { useParams } from "react-router-dom";
 import SpotTitle from "./titleSpot";
-import Collapse from "../Collapse/collapse"
+import Collapse from "../Collapse/collapse";
 
 function SpotId() {
     const { id } = useParams();
@@ -30,15 +30,15 @@ function SpotId() {
     );
 
     return (
-        <div className="spots">
-            <div>
+        <div className="spotsId">
+            <div className="img__spotId">
                 <img src={spots.picture} alt="" />
             </div>
             <SpotTitle spot={spots} />
             
             <div className="collapse__regulation">
-                <Collapse title="Description" content={spots.description}/>
-                <Collapse title="Equipements" content={spots.equipments}/>
+                <Collapse title="REGLEMENT" content={spots.regulation.map((rule, key) => <li key={key}>{rule}</li>)}/>
+                <Collapse title="POPULATION" content={spots.population.map((fish, key) => <li key={key}>{fish}</li>)}/>
             </div>
         </div>
     )

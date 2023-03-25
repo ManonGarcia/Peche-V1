@@ -22,17 +22,13 @@ export function Header() {
                 <NavLink to="/checklists">
                     <p>Checklists</p>
                 </NavLink>
-
-                <NavLink to="/conseils">
-                    <p>Nos conseils</p>
-                </NavLink>
-
-                <NavLink to="/quelle-peche">
-                    <p>Quelle pêche ?</p>
-                </NavLink>
-
+                
                 <NavLink to="/articles-vedettes">
                     <p>Articles vedettes</p>
+                </NavLink>
+
+                <NavLink to="/boutique">
+                    <p>Boutique</p>
                 </NavLink>
 
                 <NavLink to="/contact">

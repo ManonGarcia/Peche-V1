@@ -4,7 +4,7 @@ const port = 3001;
 const panel = require('./data/descriptionPanel.json');
 const whatelse = require('./data/whatElsePanel.json');
 const spots = require('./data/spotsFishing.json');
-const shopping = require('./data/shoppingItems.json')
+const shopping = require('./data/shoppingItems.json');
 const cors = require('cors');
 
 app.use(cors());

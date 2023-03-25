@@ -3,7 +3,7 @@ import FishingSpot from "../../componants/CardSpots/fishingSpot";
 
 function CardSpots() {
     const [spots, setSpots] = useState([]);
-    useEffect(() => fetchDescription, []);
+    useEffect(fetchDescription, []);
 
     function fetchDescription() {
         fetch('http://localhost:3001/spots')
@@ -18,7 +18,9 @@ function CardSpots() {
                 <img src="https://www.lemoniteur77.com/content/articles/109745/main_peche-noyade.jpg" alt="" className="imgBanner__spots" />
             </div>
             <div className="grid__spots">
-                {spots.map((spot, key)=> <FishingSpot key={key} name={spot.name} imgUrl={spot.picture} id={spot.id}/>)}
+                {spots.map((spot, key) => (
+                    <FishingSpot key={key} name={spot.name} imgUrl={spot.picture} id={spot.id}/>
+                ))}
             </div>
         </div>
     )

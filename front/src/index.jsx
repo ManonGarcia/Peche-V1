@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { Home } from "./Pages/Home";
 import Spots from "./Pages/Spots";
+import SpotId from "./componants/Spot/spot";
 import CardShopping from "./Pages/Sales"; 
 import Contact from "./Pages/Contact";
 import { Header } from "./Layout/Header/header";
@@ -10,6 +11,7 @@ import Footer from "./Layout/Footer/footer";
 import Checklists from "./Pages/Checklists";
 // import Error from "./components/Error";
 import "./style/style.css";
+import Shopping from "./Pages/Shop";
 
 const MainTemplate = () => {
     return (
@@ -35,23 +37,19 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/coins-sympas/:id",
-                // element: <Spot/>
+                element: <SpotId/>,
             },
             {
                 path: "/checklists",
                 element: <Checklists />,
             },
             {
-                path: "/conseils",
-                // element: <About />,
-            },
-            {
-                path: "/quelle-peche",
-                // element: <About />,
-            },
-            {
                 path: "/articles-vedettes",
                 element: <CardShopping />,
+            },
+            {
+                path: "/boutique",
+                element: <Shopping/>,
             },
             {
                 path: "/contact",
