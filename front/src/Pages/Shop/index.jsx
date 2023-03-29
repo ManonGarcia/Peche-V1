@@ -1,8 +1,11 @@
 import React from "react";
+import ShopBanner from "../../componants/Banner/shopBanner";
 
 function Shopping() {
     return (
-        <div></div>
+        <div className="myShop">
+            <ShopBanner/>
+        </div>
     )
 };
 
