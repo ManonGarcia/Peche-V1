@@ -34,10 +34,6 @@ export function Header() {
                 <NavLink to="/contact">
                     <p>Contact</p>
                 </NavLink>
-
-                <NavLink to="/cart" className="cart__icon">
-                    <i className="fa-solid fa-cart-shopping"></i>
-                </NavLink>
             </nav>
         </div>
     )

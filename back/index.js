@@ -5,6 +5,7 @@ const panel = require('./data/descriptionPanel.json');
 const whatelse = require('./data/whatElsePanel.json');
 const spots = require('./data/spotsFishing.json');
 const shopping = require('./data/shoppingItems.json');
+const myShop = require('./data/myArticles.json');
 const cors = require('cors');
 
 app.use(cors());
@@ -23,6 +24,10 @@ app.get('/spots', (req, res) => {
 
 app.get('/shopping', (req, res) => {
     res.send(shopping)
+});
+
+app.get('/myShop', (req, res) => {
+    res.send(myShop)
 });
 
 app.listen(port, () => {

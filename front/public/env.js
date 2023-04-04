@@ -14,7 +14,7 @@ window.env = {
   "DISPLAY": "needs-to-be-defined",
   "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
   "EDITOR": "notepad.exe",
-  "EFC_11920": "1",
+  "EFC_40080": "1",
   "EXEPATH": "C:\\Program Files\\Git",
   "HOME": "C:\\Users\\garci",
   "HOMEDRIVE": "C:",

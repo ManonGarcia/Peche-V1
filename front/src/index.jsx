@@ -12,6 +12,7 @@ import Checklists from "./Pages/Checklists";
 // import Error from "./components/Error";
 import "./style/style.css";
 import Shopping from "./Pages/Shop";
+import ArticleId from "./componants/CardOfMyShop/article";
 
 const MainTemplate = () => {
     return (
@@ -50,6 +51,10 @@ const Router = createBrowserRouter([
             {
                 path: "/boutique",
                 element: <Shopping/>,
+            },
+            {
+                path: "/boutique/:id",
+                element: <ArticleId/>,
             },
             {
                 path: "/contact",
