@@ -1,35 +1,40 @@
-const express = require('express');
-const app = express();
-const port = 3001;
 const panel = require('./data/descriptionPanel.json');
 const whatelse = require('./data/whatElsePanel.json');
 const spots = require('./data/spotsFishing.json');
 const shopping = require('./data/shoppingItems.json');
-const myShop = require('./data/myArticles.json');
+const myArticles = require('./data/myArticles.json');
+
+
+const express = require('express');
 const cors = require('cors');
+const app = express();
+const port = 3001;
+
+require('dotenv').config();
+console.log(process.env.DB_USER);
+
+require('./models/admin')
 
 app.use(cors());
+app.use(express.json());
 
-app.get('/panel', (req, res) => {
-    res.send(panel)
-});
+app.get('/', (req, res) => res.send("I'm online !"));
 
-app.get('/whatelse', (req, res) => {
-    res.send(whatelse)
-});
+app.get('*', (req, res) => res.status(501).send('Error !'));
 
-app.get('/spots', (req, res) => {
-    res.send(spots)
-});
 
-app.get('/shopping', (req, res) => {
-    res.send(shopping)
-});
 
-app.get('/myShop', (req, res) => {
-    res.send(myShop)
-});
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-});
+
+
+app.get('/panel', (req, res) => res.send(panel));
+
+app.get('/whatelse', (req, res) => res.send(whatelse));
+
+app.get('/spots', (req, res) => res.send(spots));
+
+app.get('/shopping', (req, res) => res.send(shopping));
+
+app.get('/myArticles', (req, res) => res.send(myArticles));
+
+app.listen(port, () => console.log(`Listening on port ${port}`));

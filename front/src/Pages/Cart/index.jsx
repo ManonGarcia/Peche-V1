@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react";
 
-function Cart({ cart, updateCart, articles }) {
+function Cart({ cart, updateCart, article }) {
     const [isOpen, setIsOpen] = useState(true);
-	const total = cart.reduce((acc, article) => {
-		return acc + article.amount * article.price, 0
-	});
+    const total = cart.reduce(
+        (acc, articleType) => acc + articleType.amount*articleType.price, 
+        0
+    );
 
 	useEffect(() => {
 		document.title = `Total: ${total}€ d'achats`
@@ -20,15 +21,22 @@ function Cart({ cart, updateCart, articles }) {
                     <h2>Panier</h2>
 
                     <ul>
-                        {articles.map((article, index) => (
+                        {/* {cart.map((name, picture, price, amount, index) => (
                             <div key={index}>
-                                <img src={article.picture} alt="" />
+                                <img src={picture} alt="" />
                                 <div>
-                                    <h3>{article.name}</h3>
-                                    <p>{article.price*article.count}€</p>
+                                    <h3>{name}</h3>
+                                    <p>{price}€ x {amount}</p>
                                 </div>
                             </div>
-                        ))}                       
+                        ))}     */}
+                        
+                        {cart.map(({ name, price, amount, index}) => (
+                            <div key={`${name}-${index}`}>
+                                    {name} {price}€ x {amount}
+                            </div>
+                        ))}
+                                           
                     </ul>
 
                     <h3>Total :{total}€</h3>
