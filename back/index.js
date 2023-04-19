@@ -4,21 +4,33 @@ const spots = require('./data/spotsFishing.json');
 const shopping = require('./data/shoppingItems.json');
 const myArticles = require('./data/myArticles.json');
 
+/************************************ */
 
 const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = 3001;
-
 require('dotenv').config();
 console.log(process.env.DB_USER);
 
-require('./models/admin')
+/************************************ */
+
+const db = require('./db.config');
+
+/************************************ */
+
+const auth_admin = require('./routes/admin');
+
+/************************************ */
 
 app.use(cors());
 app.use(express.json());
+/************************************ */
+
 
 app.get('/', (req, res) => res.send("I'm online !"));
+
+app.use('/auth', auth_admin);
 
 app.get('*', (req, res) => res.status(501).send('Error !'));
 
@@ -37,4 +49,13 @@ app.get('/shopping', (req, res) => res.send(shopping));
 
 app.get('/myArticles', (req, res) => res.send(myArticles));
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+
+db.authenticate()
+.then(() => {
+    console.log('Connexion à la base de données réussie !');})
+.then(() => {
+    app.listen(port, () => console.log(`Listening on port ${port}`));
+})
+.catch((err) => {
+    console.log('Connexion à la base de données échouée !');
+});

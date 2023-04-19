@@ -9,8 +9,4 @@ const db = process.env.DB_DATABASE;
 
 const sequelize = new Sequelize(`postgres://${username}:${password}@${host}:${port}/${db}`);
 
-sequelize.authenticate().then(() => {
-    console.log('Connexion à la base de données réussie !');
-}).catch((err) => {
-    console.log('Connexion à la base de données échouée !');
-});
+module.exports = sequelize;
