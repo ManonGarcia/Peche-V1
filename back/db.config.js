@@ -9,4 +9,8 @@ const db = process.env.DB_DATABASE;
 
 const sequelize = new Sequelize(`postgres://${username}:${password}@${host}:${port}/${db}`);
 
+sequelize.sync(() => {
+    console.log('Synchro bdd OK !')
+});
+
 module.exports = sequelize;
