@@ -12,7 +12,8 @@ const User = db.define('user', {
   }
 }, { 
       paranoid: true,       //softDelete
-      schema: 'users'
+      schema: 'users',
+      tableName: 'tb_user'
     }
 );
 

@@ -25,17 +25,16 @@ const auth_admin = require('./routes/admin');
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 /************************************ */
 
 
 app.get('/', (req, res) => res.send("I'm online !"));
 
-app.use('/auth', auth_admin);
+app.use('/admin', auth_admin);
 
 app.get('*', (req, res) => res.status(501).send('Error !'));
-
-
-
 
 
 
