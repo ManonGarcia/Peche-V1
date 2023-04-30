@@ -2,7 +2,7 @@ version: '3.9'
 services:
   db:
     container_name: pg_container
-    image: postgres
+    build: ./docker/postgresql
     restart: always
     environment:
       POSTGRES_USER: root

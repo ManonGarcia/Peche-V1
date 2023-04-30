@@ -11,14 +11,14 @@ const User = db.define('user', {
     is: /^[0-9a-f]{64}$/i
   }
 }, { 
-      paranoid: true,       //softDelete
       schema: 'users',
-      tableName: 'tb_user'
+      tableName: 'tb_user',
+      timestamps: false
     }
 );
 
-User.sync();
-// User.sync({force: true});
+// User.sync();
+User.sync({force: true});
 // User.sync({alter: true});
 
 module.exports = User;
