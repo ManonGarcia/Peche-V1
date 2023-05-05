@@ -15,7 +15,7 @@ console.log(process.env.DB_USER);
 
 /************************************ */
 
-const db = require('./db.config');
+const db = require('./db.config');  
 
 /************************************ */
 
@@ -56,5 +56,5 @@ db.authenticate()
     app.listen(port, () => console.log(`Listening on port ${port}`));
 })
 .catch((err) => {
-    console.log('Connexion à la base de données échouée !');
+    console.log(err);
 });

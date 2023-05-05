@@ -2,12 +2,12 @@ version: '3.9'
 services:
   db:
     container_name: pg_container
-    build: ./docker/postgresql
+    image: postgres
     restart: always
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: test_db
+      POSTGRES_DB: peche
     ports:
       - "5432:5432"
   pgadmin:
