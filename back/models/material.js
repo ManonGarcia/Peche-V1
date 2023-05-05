@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const db = require('../db.config');
-const { Checklist } = require('./checklists')
+const { Checklist } = require('./checklist');
 
 const Material = db.define('material', {
     id: {

@@ -5,9 +5,8 @@ module.exports = {
     await queryInterface.createTable('rules', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID
       },
       content: {
         type: Sequelize.STRING
