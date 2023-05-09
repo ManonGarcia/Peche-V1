@@ -43,7 +43,9 @@ const Spot = db.define('spot', {
     price_duration: {
         type: DataTypes.STRING,
     }
-    }
+    }, {
+        underscored: true
+      }
 );
 
 Spot.belongsToMany(Fish);

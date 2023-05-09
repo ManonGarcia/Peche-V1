@@ -12,6 +12,8 @@ const Fish = db.define('fish', {
         type: DataTypes.STRING,
         allowNull: false,
       }
+    }, {
+      underscored: true
     }
 ); 
 

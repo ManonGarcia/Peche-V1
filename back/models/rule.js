@@ -11,6 +11,8 @@ const Rule = db.define('rule', {
       content: {
         type: DataTypes.STRING,
       }
+    }, {
+      underscored: true
     }
 ); 
 

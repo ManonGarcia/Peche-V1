@@ -1,8 +1,7 @@
 const { DataTypes } = require('sequelize');
 const db = require('../db.config');
-const { Material } = require('./material');
 
-const Checklist = db.define('checklist', {
+const Checklist = db.define('Checklist', {
       id: {
         type: DataTypes.UUID,
         allowNull: false,
@@ -12,9 +11,10 @@ const Checklist = db.define('checklist', {
         type: DataTypes.STRING,
         allowNull: false,
       }
+    }, {
+      underscored: true
     }
 );
 
-Checklist.belongsToMany(Material);
 
 module.exports = { Checklist };

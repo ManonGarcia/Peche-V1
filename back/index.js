@@ -19,7 +19,8 @@ const db = require('./db.config');
 
 /************************************ */
 
-const auth_admin = require('./routes/admin');
+const auth_admin = require('./routes/user');
+const checklist = require('./routes/checklist');
 
 /************************************ */
 
@@ -33,6 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => res.send("I'm online !"));
 
 app.use('/admin', auth_admin);
+app.use('/admin/checklist', checklist);
 
 app.get('*', (req, res) => res.status(501).send('Error !'));
 

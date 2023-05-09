@@ -10,6 +10,8 @@ const User = db.define('user', {
         type: DataTypes.STRING,
         is: /^[0-9a-f]{64}$/i
       }
+    }, {
+      underscored: true
     }
 );
 
