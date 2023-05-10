@@ -12,7 +12,9 @@ const Checklist = db.define('Checklist', {
         allowNull: false,
       }
     }, {
-      underscored: true
+      underscored: true,
+      timestamps: false
+      
     }
 );
 

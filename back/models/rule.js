@@ -1,8 +1,7 @@
 const { DataTypes } = require('sequelize');
 const db = require('../db.config');
-const { Spot } = require('./spot');
 
-const Rule = db.define('rule', {
+const Rule = db.define('Rule', {
       id: {
         type: DataTypes.UUID,
         allowNull: false,
@@ -12,10 +11,9 @@ const Rule = db.define('rule', {
         type: DataTypes.STRING,
       }
     }, {
-      underscored: true
+      underscored: true,
+      timestamps: false
     }
 ); 
-
-Rule.belongsToMany(Spot);
 
 module.exports = { Rule };

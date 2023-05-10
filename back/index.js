@@ -21,6 +21,10 @@ const db = require('./db.config');
 
 const auth_admin = require('./routes/user');
 const checklist = require('./routes/checklist');
+const spot = require('./routes/spot');
+const material = require('./routes/material');
+const fish = require('./routes/fish');
+const rule = require('./routes/rule');
 
 /************************************ */
 
@@ -35,6 +39,10 @@ app.get('/', (req, res) => res.send("I'm online !"));
 
 app.use('/admin', auth_admin);
 app.use('/admin/checklist', checklist);
+app.use('/admin/spot', spot);
+app.use('/admin/material', material);
+app.use('/admin/fish', fish);
+app.use('/admin/rule', rule);
 
 app.get('*', (req, res) => res.status(501).send('Error !'));
 

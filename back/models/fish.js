@@ -1,8 +1,7 @@
 const { DataTypes } = require('sequelize');
 const db = require('../db.config');
-const { Spot } = require('./spot');
 
-const Fish = db.define('fish', {
+const Fish = db.define('Fish', {
       id: {
         type: DataTypes.UUID,
         allowNull: false,
@@ -13,10 +12,9 @@ const Fish = db.define('fish', {
         allowNull: false,
       }
     }, {
-      underscored: true
+      underscored: true,
+      timestamps: false
     }
 ); 
-
-Fish.belongsToMany(Spot);
 
 module.exports = { Fish };

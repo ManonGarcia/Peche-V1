@@ -1,27 +1,17 @@
 const { Checklist, Material } = require('../models');
 
-function getAll(req, res) {
+function getAllChecklists (req, res) {
     Checklist.findAll({
         include: [{
             model: Material,
             as: 'materials'
-        }]
+        }],
     })
-    .then((checklists) => {
-        res.status(200).json(checklists)
-    })
-    .catch(err => { console.log(err); res.status(500).json(err)})
+    .then(checklists => res.status(200).json(checklists))
+    .catch(err => res.status(500).json(err))
 };
 
-function getMaterials(req, res) {
-    Material.findAll()
-    .then((checklists) => {
-        res.status(200).json(checklists)
-    })
-    .catch(err => { console.log(err); res.status(500).json(err)})
-};
-
-function getOne(req, res) {
+function getOneChecklist (req, res) {
     const { id } = req.params
     Checklist.findByPk(id)
     .then(checklist => {
@@ -31,8 +21,10 @@ function getOne(req, res) {
     .catch(err => res.status(500).json(err))
 };
 
-function createOne(req, res) {
+function createOneChecklist (req, res) {
     const { body } = req
+    console.log(body)
+
     Checklist.create({ ...body })
     .then(() => {
         res.status(201).json({ message: 'Checklist créée !'})
@@ -40,13 +32,31 @@ function createOne(req, res) {
     .catch(err => res.status(500).json(err))
 };
 
-function updateOne(req, res) {
+function updateOneChecklist (req, res) {
+    const { id } = req.params
+    const { body } = req
 
+    Checklist.findByPk(id)
+    .then(checklist => {
+        if(!checklist) return res.status(404).json({ message: 'Introuvable !'})
+        checklist.name = body.name
+        checklist.save()
+        .then(() => res.status(201).json({ message: 'Checklist mise à jour'}))
+        .catch((err) => res.status(500).json(err))
+    })
+    .catch((err) => res.status(500).json(err))
 };
 
-function deleteOne(req, res) {
+function deleteOneChecklist (req, res) {
+    const { id } = req.params
 
+    Checklist.destroy({ where: { id: id } })
+    .then(checklist => {
+        if(checklist === 0) return res.status(404).json({ message: 'Non trouvée !' })
+        res.status(200).json({ message: 'Checklist supprimée !' })
+    })
+    .catch((err) => res.status(500).json(err))
 };
 
 
-module.exports = { getAll, getOne, createOne, updateOne, deleteOne, getMaterials };
+module.exports = { getAllChecklists, getOneChecklist, createOneChecklist, updateOneChecklist, deleteOneChecklist };
