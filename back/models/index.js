@@ -5,8 +5,8 @@ const { Rule } = require('./rule');
 const { Spot } = require('./spot');
 
 
-Material.belongsToMany(Checklist, { as: 'checklists', through: 'checklists_materials', timestamps: false });
-Checklist.belongsToMany(Material, { as: 'materials', through: 'checklists_materials', timestamps: false });
+Material.belongsToMany(Checklist, { as: 'checklists', through: 'checklists_materials', timestamps: false, onDelete: 'CASCADE', hooks: true });
+Checklist.belongsToMany(Material, { as: 'materials', through: 'checklists_materials', timestamps: false, onDelete: 'CASCADE', hooks: true });
 
 
 Spot.belongsToMany(Fish, { as: 'fishes', through: 'spots_fishes', timestamps: false });

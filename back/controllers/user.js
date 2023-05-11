@@ -28,7 +28,7 @@ async function adminLogin(req, res) {
         return res.status(400).json({message: 'Erreur identifiant ou mot de passe'})
     };
     
-    const user = await User.findOne({where: {username: username, password: password}, raw: true});
+    const user = await User.findOne({where: {username: username}, raw: true});
     if(user === null) {
         res.status(403).json({ message: 'Paire identifiant/mot de passe incorrecte' });
     } else {
@@ -43,7 +43,7 @@ async function adminLogin(req, res) {
 };
 
 function createToken(user) {
-    const jwtToken = process.env.JWT_PASSWORD;
+    const jwtToken = process.env.JWT_SECRET;
     const token = jwt.sign({userId: user.id}, jwtToken, {expiresIn: '24h'});
     return token
 };

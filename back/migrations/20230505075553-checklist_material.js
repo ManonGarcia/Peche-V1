@@ -9,14 +9,16 @@ module.exports = {
         references: {
           model: 'checklists',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
       material_id: {
         type: Sequelize.UUID,
         references: {
           model: 'materials',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
     });
   },

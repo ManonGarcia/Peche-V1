@@ -38,11 +38,11 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => res.send("I'm online !"));
 
 app.use('/admin', auth_admin);
-app.use('/admin/checklist', checklist);
-app.use('/admin/spot', spot);
-app.use('/admin/material', material);
-app.use('/admin/fish', fish);
-app.use('/admin/rule', rule);
+app.use('/checklist', checklist);
+app.use('/spot', spot);
+app.use('/material', material);
+app.use('/fish', fish);
+app.use('/rule', rule);
 
 app.get('*', (req, res) => res.status(501).send('Error !'));
 
