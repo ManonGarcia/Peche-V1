@@ -9,14 +9,16 @@ module.exports = {
         references: {
           model: 'spots',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
       rule_id: {
         type: Sequelize.UUID,
         references: {
           model: 'rules',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
     });
   },

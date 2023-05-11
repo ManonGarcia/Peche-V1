@@ -6,14 +6,15 @@ const Material = db.define('Material', {
         type: DataTypes.UUID,
         allowNull: false,
         primaryKey: true,
+        defaultValue: DataTypes.UUIDV4
       },
       name: {
         type: DataTypes.STRING,
         allowNull: false,
       }
   }, {
-    timestamps: false,
-    underscored: true
+    underscored: true,
+    timestamps: false
   }
 );
 

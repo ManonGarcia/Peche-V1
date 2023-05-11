@@ -4,10 +4,14 @@ const jwt = require('jsonwebtoken');
 
 async function adminSignup (req, res) {
     try {
-        const { id, username, password } = req.body;
+        const { username, password } = req.body;
+        if (!username || !password) {
+            return res.status(400).json({message: 'Erreur identifiant ou mot de passe'})
+        };
+
         const hash = await hashPassword(password);
 
-        const newUser = new User({ id, username, password: hash });
+        const newUser = new User({ username, password: hash });
         newUser.save()
         .then(() => res.status(201).json({ message: 'Nouvel utilisateur enregistré !'}))
         .catch(() => res.status(403).json({ message: 'Requête impossible, utilisateur déjà enregistré !' }));

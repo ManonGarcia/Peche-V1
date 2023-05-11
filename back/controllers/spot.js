@@ -56,7 +56,8 @@ function updateOneSpot (req, res) {
     Spot.findByPk(id)
     .then(spot => {
         if(!spot) return res.status(404).json({ message: 'Introuvable !'})
-        spot.name = body.name
+        spot.set({...body})
+        console.log(body)
         spot.save()
         .then(() => res.status(201).json({ message: 'Spot mis à jour'}))
         .catch((err) => res.status(500).json(err))

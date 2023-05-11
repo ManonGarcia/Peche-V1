@@ -13,7 +13,12 @@ function getAllChecklists (req, res) {
 
 function getOneChecklist (req, res) {
     const { id } = req.params
-    Checklist.findByPk(id)
+    Checklist.findByPk(id, {
+        include: [{
+                model: Material,
+                as: 'materials'
+        }],
+    })
     .then(checklist => {
         if(!checklist) return res.status(404).json({ message: 'Introuvable !'})
         res.status(200).json(checklist)

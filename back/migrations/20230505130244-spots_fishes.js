@@ -9,14 +9,16 @@ module.exports = {
         references: {
           model: 'spots',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
       fish_id: {
         type: Sequelize.UUID,
         references: {
           model: 'fishes',
           key: 'id'
-        }
+        },
+        onDelete: 'CASCADE'
       },
     });
   },

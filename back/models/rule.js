@@ -6,6 +6,7 @@ const Rule = db.define('Rule', {
         type: DataTypes.UUID,
         allowNull: false,
         primaryKey: true,
+        defaultValue: DataTypes.UUIDV4
       },
       content: {
         type: DataTypes.STRING,
