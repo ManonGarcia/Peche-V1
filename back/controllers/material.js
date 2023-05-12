@@ -36,7 +36,7 @@ function updateOneMaterial (req, res) {
         if(!material) return res.status(404).json({ message: 'Introuvable !'})
         material.name = body.name
         material.save()
-        .then(() => res.status(201).json({ message: 'Matériel mis à jour'}))
+        .then(() => res.status(200).json({ message: 'Matériel mis à jour'}))
         .catch((err) => res.status(500).json(err))
     })
     .catch((err) => res.status(500).json(err))

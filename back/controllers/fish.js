@@ -36,7 +36,7 @@ function updateOneFish (req, res) {
         if(!fish) return res.status(404).json({ message: 'Introuvable !'})
         fish.name = body.name
         fish.save()
-        .then(() => res.status(201).json({ message: 'Poisson mis à jour'}))
+        .then(() => res.status(200).json({ message: 'Poisson mis à jour'}))
         .catch((err) => res.status(500).json(err))
     })
     .catch((err) => res.status(500).json(err))

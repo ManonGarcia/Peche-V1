@@ -1,14 +1,15 @@
 const jwt = require('jsonwebtoken');
 const { User } = require('../models/index');
 
-function authorization(req, res, next) {
+async function authorization(req, res, next) {
     try {
         const token = req.headers.authorization.split(' ')[1];
         const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-        const user = User.findByPk(decodedToken.userId, { include: "role"});
-        console.log(user.role)
+        const user = await User.findByPk(decodedToken.userId, { include: "role" });
         req.auth = {
-                user: user
+                username: user.username,
+                id: user.id,
+                role: user.role.role
         };
         next();
     } catch(error) {
@@ -16,5 +17,12 @@ function authorization(req, res, next) {
     }
 };
 
+function isAdmin(req, res, next) {
+    console.log(req.auth)
+    if(req.auth.role !== 'admin') {
+        res.status(401).send()
+    }
+    next()
+};
 
-module.exports = {authorization}; 
+module.exports = {authorization, isAdmin}; 

@@ -58,7 +58,7 @@ function updateOneSpot (req, res) {
         if(!spot) return res.status(404).json({ message: 'Introuvable !'})
         spot.set({...body})
         spot.save()
-        .then(() => res.status(201).json({ message: 'Spot mis à jour'}))
+        .then(() => res.status(200).json({ message: 'Spot mis à jour'}))
         .catch((err) => res.status(500).json(err))
     })
     .catch((err) => res.status(500).json(err))

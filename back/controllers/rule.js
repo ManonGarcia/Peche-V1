@@ -36,7 +36,7 @@ function updateOneRule (req, res) {
         if(!rule) return res.status(404).json({ message: 'Introuvable !'})
         rule.content = body.content
         rule.save()
-        .then(() => res.status(201).json({ message: 'Règle mise à jour'}))
+        .then(() => res.status(200).json({ message: 'Règle mise à jour'}))
         .catch((err) => res.status(500).json(err))
     })
     .catch((err) => res.status(500).json(err))
