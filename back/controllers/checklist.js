@@ -44,7 +44,7 @@ function updateOneChecklist (req, res) {
     Checklist.findByPk(id)
     .then(checklist => {
         if(!checklist) return res.status(404).json({ message: 'Introuvable !'})
-        checklist.name = body.name
+        checklist.set({...body})
         checklist.save()
         .then(() => res.status(201).json({ message: 'Checklist mise à jour'}))
         .catch((err) => res.status(500).json(err))

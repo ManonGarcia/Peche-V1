@@ -3,6 +3,8 @@ const { Material } = require('./material');
 const { Fish } = require('./fish');
 const { Rule } = require('./rule');
 const { Spot } = require('./spot');
+const { User } = require('./user');
+const { Role } = require('./role');
 
 
 Material.belongsToMany(Checklist, { as: 'checklists', through: 'checklists_materials', timestamps: false, onDelete: 'CASCADE', hooks: true });
@@ -16,5 +18,8 @@ Spot.belongsToMany(Rule, { as: 'rules', through: 'spots_rules', timestamps: fals
 Rule.belongsToMany(Spot, { as: 'spots', through: 'spots_rules', timestamps: false, onDelete: 'CASCADE', hooks: true });
 
 
+Role.hasMany(User, { timestamps: false });
+User.belongsTo(Role, { as: 'role', timestamps: false });
 
-module.exports = { Material, Checklist, Spot, Fish, Rule }
+
+module.exports = { Material, Checklist, Spot, Fish, Rule, User, Role }

@@ -29,12 +29,12 @@ async function adminLogin(req, res) {
     const { username, password } = req.body;
 
     if (!username || !password) {
-        return res.status(400).json({message: 'Erreur identifiant ou mot de passe'})
+        return res.status(400).json({message: 'Erreur identifiant / mot de passe manquant !'})
     };
     
     const user = await User.findOne({where: {username: username}, raw: true});
     if(user === null) {
-        res.status(403).json({ message: 'Paire identifiant/mot de passe incorrecte' });
+        res.status(404).json({ message: 'Utilisateur non trouvé. Erreur identifiant/mot de passe !' });
     } else {
         const passwordValid = await bcrypt.compare(password, user.password);
             if (!passwordValid) {
