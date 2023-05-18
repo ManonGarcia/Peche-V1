@@ -1,4 +1,5 @@
 const { Rule } = require('../models');
+const { ruleValidation } = require('../validation/productValidation');
 
 function getAllRules (req, res) {
     Rule.findAll()
@@ -18,7 +19,9 @@ function getOneRule (req, res) {
 
 function createOneRule (req, res) {
     const { body } = req
-    console.log(body)
+
+    const { error } = ruleValidation(body);
+    if(error) return res.status(401).json(error.details[0].message);
 
     Rule.create({ ...body })
     .then(() => {

@@ -1,4 +1,6 @@
 const { Checklist, Material } = require('../models');
+const { checklistValidation } = require('../validation/productValidation');
+
 
 function getAllChecklists (req, res) {
     Checklist.findAll({
@@ -28,7 +30,9 @@ function getOneChecklist (req, res) {
 
 function createOneChecklist (req, res) {
     const { body } = req
-    console.log(body)
+
+    const { error } = checklistValidation(body);
+    if(error) return res.status(401).json(error.details[0].message);
 
     Checklist.create({ ...body })
     .then(() => {

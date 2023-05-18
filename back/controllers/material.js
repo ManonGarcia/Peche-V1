@@ -1,4 +1,5 @@
 const { Material } = require('../models');
+const { materialValidation } = require('../validation/productValidation');
 
 function getAllMaterials (req, res) {
     Material.findAll()
@@ -18,7 +19,9 @@ function getOneMaterial (req, res) {
 
 function createOneMaterial (req, res) {
     const { body } = req
-    console.log(body)
+
+    const { error } = materialValidation(body);
+    if(error) return res.status(401).json(error.details[0].message);
 
     Material.create({ ...body })
     .then(() => {

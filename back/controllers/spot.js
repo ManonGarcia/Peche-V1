@@ -1,16 +1,11 @@
 const { Spot, Fish, Rule } = require('../models');
+const { spotValidation } = require('../validation/productValidation');
 
 function getAllSpots (req, res) {
     Spot.findAll({
         include: [
-            {
-                model: Fish,
-                as: 'fishes'
-            },
-            {
-                model: Rule,
-                as: 'rules'
-            }
+            { model: Fish, as: 'fishes' },
+            { model: Rule, as: 'rules' }
         ],
     })
     .then(spots => res.status(200).json(spots))
@@ -21,14 +16,8 @@ function getOneSpot (req, res) {
     const { id } = req.params
     Spot.findByPk(id, {
         include: [
-            {
-                model: Fish,
-                as: 'fishes'
-            },
-            {
-                model: Rule,
-                as: 'rules'
-            }
+            { model: Fish, as: 'fishes' },
+            { model: Rule, as: 'rules' }
         ],
     })
     .then(spot => {
@@ -40,7 +29,9 @@ function getOneSpot (req, res) {
 
 function createOneSpot (req, res) {
     const { body } = req
-    console.log(body)
+
+    const { error } = spotValidation(body);
+    if(error) return res.status(401).json(error.details[0].message);
 
     Spot.create({ ...body })
     .then(() => {

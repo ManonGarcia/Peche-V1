@@ -1,6 +1,7 @@
 const { User } = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const { userValidation } = require('../validation/userValidation');
 
 async function adminSignup (req, res) {
     try {
@@ -8,6 +9,8 @@ async function adminSignup (req, res) {
         if (!username || !password) {
             return res.status(400).json({message: 'Erreur identifiant ou mot de passe'})
         };
+        const { error } = userValidation(req.body);
+        if(error) return res.status(401).json(error.details[0].message);
 
         const hash = await hashPassword(password);
 

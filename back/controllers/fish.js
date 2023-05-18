@@ -1,4 +1,5 @@
 const { Fish } = require('../models');
+const { fishValidation } = require('../validation/productValidation');
 
 function getAllFishes (req, res) {
     Fish.findAll()
@@ -18,7 +19,9 @@ function getOneFish (req, res) {
 
 function createOneFish (req, res) {
     const { body } = req
-    console.log(body)
+
+    const { error } = fishValidation(body);
+    if(error) return res.status(401).json(error.details[0].message);
 
     Fish.create({ ...body })
     .then(() => {
