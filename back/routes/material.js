@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const materialCtrl = require('../controllers/material');
-const { authorization } = require('../middleware/authAdmin')
+const { authorization, isAdmin } = require('../middleware/authAdmin')
 
-router.get('/', materialCtrl.getAllMaterials);
-router.get('/:id', materialCtrl.getOneMaterial);
-router.post('/', authorization, materialCtrl.createOneMaterial);
-router.put('/:id', authorization, materialCtrl.updateOneMaterial);
-router.delete('/:id', authorization, materialCtrl.deleteOneMaterial);
+router.get('/', authorization, materialCtrl.getAllMaterials);
+router.get('/:id', authorization, materialCtrl.getOneMaterial);
+router.post('/', authorization, isAdmin, materialCtrl.createOneMaterial);
+router.put('/:id', authorization, isAdmin, materialCtrl.updateOneMaterial);
+router.delete('/:id', authorization, isAdmin, materialCtrl.deleteOneMaterial);
 
 
 module.exports = router;

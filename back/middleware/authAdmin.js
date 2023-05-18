@@ -20,7 +20,7 @@ async function authorization(req, res, next) {
 function isAdmin(req, res, next) {
     console.log(req.auth)
     if(req.auth.role !== 'admin') {
-        res.status(401).send()
+        return res.status(401).send()
     }
     next()
 };

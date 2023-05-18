@@ -4,7 +4,7 @@ const db = require('../db.config');
 const Role = db.define('Role', {
     role: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     }
 }, {
       underscored: true,
