@@ -1,0 +1,862 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "La Pêche",
+    "description": "API documentation produced by Manon Garcia, for the site: \"La Pêche\".",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "garciamanon9@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001"
+    }
+  ],
+  "tags": [
+    {
+      "name": "User",
+      "description": "Opérations User"
+    },
+    {
+      "name": "Checklist",
+      "description": "Opérations Checklist"
+    },
+    {
+      "name": "Spot",
+      "description": "Opérations Spot"
+    },
+    {
+      "name": "Material",
+      "description": "Opérations Material"
+    },
+    {
+      "name": "Fish",
+      "description": "Opérations Fish"
+    },
+    {
+      "name": "Rule",
+      "description": "Opérations Rule"
+    }
+  ],
+  "paths": {
+    "/admin/signup": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create user",
+        "description": "",
+        "operationId": "createUser",
+        "requestBody": {
+          "description": "Created user object",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqPost"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqPost"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created. New registered user.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request. Invalid username or password."
+          },
+          "401": {
+            "description": "Unauthorized. Registration required."
+          },
+          "403": {
+            "description": "Forbidden. Request not possible, user already registered."
+          }
+        }
+      }
+    },
+    "/admin/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Logs user into the system",
+        "description": "",
+        "operationId": "loginUser",
+        "requestBody": {
+          "description": "Login user",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqPost"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqPost"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request. Invalid username or password."
+          },
+          "401": {
+            "description": "Unauthorized. Incorrect password."
+          },
+          "404": {
+            "description": "User not found."
+          }
+        }
+      }
+    },
+    "/checklist": {
+      "get": {
+        "tags": [
+          "Checklist"
+        ],
+        "summary": "Return all checklists",
+        "description": "",
+        "operationId": "getAllChecklists",
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Checklist"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Checklist"
+        ],
+        "summary": "Add a new checklist",
+        "description": "Add a new checklist",
+        "requestBody": {
+          "description": "Create a new checklist",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChecklistReqPost"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/ChecklistReqPost"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created. New checklist created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Checklist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/checklist/{checklistId}": {
+      "get": {
+        "tags": [
+          "Checklist"
+        ],
+        "summary": "Find checklist by ID",
+        "description": "Returns a single checklist",
+        "operationId": "getChecklistById",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "description": "ID of checklist to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Checklist"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Checklist not found."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Checklist"
+        ],
+        "summary": "Update checklist",
+        "description": "Update a single checklist",
+        "operationId": "updateChecklist",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "description": "ID of checklist to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Checklist"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Checklist not found."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Checklist"
+        ],
+        "summary": "Delete checklist",
+        "description": "Delete a single checklist",
+        "operationId": "deleteChecklist",
+        "parameters": [
+          {
+            "name": "checklistId",
+            "in": "path",
+            "description": "ID of checklist to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Checklist"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Checklist not found."
+          }
+        }
+      }
+    },
+    "/spot": {
+      "get": {
+        "tags": [
+          "Spot"
+        ],
+        "summary": "Return all spots",
+        "description": "Return array of spots",
+        "operationId": "getAllSpots",
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Spot"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Spot"
+        ],
+        "summary": "Add a new spot",
+        "description": "Add a new spot",
+        "operationId": "addSpot",
+        "requestBody": {
+          "description": "Create a new spot",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpotReqPost"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SpotReqPost"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Created. New spot created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Spot"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/spot/{spotId}": {
+      "get": {
+        "tags": [
+          "Spot"
+        ],
+        "summary": "Find spot by ID",
+        "description": "Returns a single spot",
+        "operationId": "getSpotById",
+        "parameters": [
+          {
+            "name": "spotId",
+            "in": "path",
+            "description": "ID of spot to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Spot"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Spot not found."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Spot"
+        ],
+        "summary": "Update spot",
+        "description": "Update a single spot",
+        "operationId": "updateSpot",
+        "parameters": [
+          {
+            "name": "spotId",
+            "in": "path",
+            "description": "ID of spot to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Spot"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Spot not found."
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Spot"
+        ],
+        "summary": "Delete spot",
+        "description": "Delete a single spot",
+        "operationId": "deleteSpot",
+        "parameters": [
+          {
+            "name": "spotId",
+            "in": "path",
+            "description": "ID of pot",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Spot"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Spot not found."
+          }
+        }
+      }
+    },
+    "/material": {
+      "get": {
+        "tags": [
+          "Material"
+        ],
+        "summary": "Return all materials",
+        "description": "Return array of materials",
+        "operationId": "getAllMaterials",
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Material"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/material/{materialId}": {
+      "get": {
+        "tags": [
+          "Material"
+        ],
+        "summary": "Find material by ID",
+        "description": "Returns a single material",
+        "operationId": "getMaterialById",
+        "parameters": [
+          {
+            "name": "materialId",
+            "in": "path",
+            "description": "ID of material to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Material"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Material not found."
+          }
+        }
+      }
+    },
+    "/fish": {
+      "get": {
+        "tags": [
+          "Fish"
+        ],
+        "summary": "Return all fishes",
+        "description": "Return array of fishes",
+        "operationId": "getAllFishes",
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fish"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fish/{fishId}": {
+      "get": {
+        "tags": [
+          "Fish"
+        ],
+        "summary": "Find fish by ID",
+        "description": "Returns a single fish",
+        "operationId": "getFishById",
+        "parameters": [
+          {
+            "name": "fishId",
+            "in": "path",
+            "description": "ID of fish to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fish"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Fish not found."
+          }
+        }
+      }
+    },
+    "/rule": {
+      "get": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Return all rules",
+        "description": "Return array of rules",
+        "operationId": "getAllRules",
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/rule/{ruleId}": {
+      "get": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Find rule by ID",
+        "description": "Returns a single rule",
+        "operationId": "getRuleById",
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of rule to return",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rule"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Rule not found."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0e8036cb-072d-487c-9498-e552a6124ca2"
+          },
+          "username": {
+            "type": "string",
+            "example": "username"
+          },
+          "password": {
+            "type": "string",
+            "example": "password"
+          },
+          "role_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Role assigned to the user, coming from the \"roles\" model."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2013-05-11T17:32:28.000Z"
+          }
+        }
+      },
+      "UserReqPost": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "example": "username"
+          },
+          "password": {
+            "type": "string",
+            "example": "password"
+          }
+        }
+      },
+      "Checklist": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0e8036cb-072d-487c-9498-e552a6124ca2"
+          },
+          "name": {
+            "type": "string",
+            "example": "checklist"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2013-05-11T17:32:28.000Z"
+          }
+        }
+      },
+      "ChecklistReqPost": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Checklist"
+          }
+        }
+      },
+      "Spot": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0e8036cb-072d-487c-9498-e552a6124ca2"
+          },
+          "name": {
+            "type": "string",
+            "example": "spot"
+          },
+          "localisation": {
+            "type": "string",
+            "example": "france"
+          },
+          "banner": {
+            "type": "string",
+            "example": "picture"
+          },
+          "private": {
+            "type": "boolean",
+            "example": true
+          },
+          "size": {
+            "type": "integer",
+            "example": 5
+          },
+          "nb_posts": {
+            "type": "integer",
+            "example": 2
+          },
+          "opening_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "closing_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "price": {
+            "type": "integer",
+            "example": 25
+          },
+          "price_duration": {
+            "type": "string",
+            "example": "24h"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2013-05-11T17:32:28.000Z"
+          }
+        }
+      },
+      "SpotReqPost": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Spot"
+          },
+          "localisation": {
+            "type": "string",
+            "example": "france"
+          },
+          "banner": {
+            "type": "string",
+            "example": "picture"
+          },
+          "private": {
+            "type": "boolean",
+            "example": true
+          },
+          "size": {
+            "type": "integer",
+            "example": 5
+          },
+          "nb_posts": {
+            "type": "integer",
+            "example": 2
+          },
+          "opening_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "closing_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "price": {
+            "type": "integer",
+            "example": 25
+          },
+          "price_duration": {
+            "type": "string",
+            "example": "24h"
+          }
+        }
+      },
+      "Material": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0e8036cb-072d-487c-9498-e552a6124ca2"
+          },
+          "name": {
+            "type": "string",
+            "example": "Material"
+          }
+        }
+      },
+      "Fish": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0e8036cb-072d-487c-9498-e552a6124ca2"
+          },
+          "name": {
+            "type": "string",
+            "example": "Fish"
+          }
+        }
+      },
+      "Rule": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "0e8036cb-072d-487c-9498-e552a6124ca2"
+          },
+          "content": {
+            "type": "string",
+            "example": "Rule"
+          }
+        }
+      }
+    }
+  }
+}
