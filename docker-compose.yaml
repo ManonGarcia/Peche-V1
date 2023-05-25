@@ -10,15 +10,15 @@ services:
       POSTGRES_DB: peche
     ports:
       - "5433:5432"
-  pgadmin:
-    # container_name: pgadmin4_container
-    image: dpage/pgadmin4
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: root
-    ports:
-      - "5051:80"
+  # pgadmin:
+  #   # container_name: pgadmin4_container
+  #   image: dpage/pgadmin4
+  #   restart: always
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
+  #     PGADMIN_DEFAULT_PASSWORD: root
+  #   ports:
+  #     - "5051:80"
   back:
     build: ./back
   front:

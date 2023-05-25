@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('../openapi.json');
+const swaggerDocument = require('./openapi.json');
 const port = 80;
 require('dotenv').config();
 
