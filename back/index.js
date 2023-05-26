@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./openapi.json');
-const port = 80;
+const port = 3000;
 require('dotenv').config();
 
 /************************************ */
@@ -26,14 +26,14 @@ app.use(express.urlencoded({ extended: true }));
 /************************************ */
 app.get('/', (req, res) => res.send("I'm online !"));
 
-app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use('/admin', auth_admin);
-app.use('/checklist', checklist);
-app.use('/spot', spot);
-app.use('/material', material);
-app.use('/fish', fish);
-app.use('/rule', rule);
+app.use('/api/admin', auth_admin);
+app.use('/api/checklist', checklist);
+app.use('/api/spot', spot);
+app.use('/api/material', material);
+app.use('/api/fish', fish);
+app.use('/api/rule', rule);
 
 app.get('*', (req, res) => res.status(501).send('Error !'));
 

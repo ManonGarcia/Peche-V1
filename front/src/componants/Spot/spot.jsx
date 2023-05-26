@@ -10,7 +10,7 @@ function SpotId() {
     useEffect(fetchDataSpot, []);
 
     function fetchDataSpot() {
-        fetch('http://localhost:3001/spots')
+        fetch('http://localhost:1234/spots')
             .then((res) => res.json())
             .then((spots) => {
                 const spot = spots.find((spot) => spot.id === id);
