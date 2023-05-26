@@ -204,55 +204,29 @@ body {
   background-image: url("https://img.freepik.com/photos-gratuite/articles-peche-peche-filature-ligne-peche-crochets-leurres-fond-bois_639032-1829.jpg?w=996&t=st=1679952889~exp=1679953489~hmac=0282d4b267272d2c34068784d336f167efc4dca2988e6327d3c2896888483696");
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center;
   height: 700px;
   margin: 1% 0;
+  color: #FFFFFF;
 }
-.form__background .form_contact {
-  text-align: center;
-  margin: 2% 0;
-  padding: 8% 20% 12% 0;
-  background-image: url("../assets/pngegg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.form__background .form_contact .title_form {
-  padding-top: 8%;
-  margin-left: 24%;
-}
-.form__background .form_contact .form .input_form {
-  display: flex;
-  flex-direction: column;
-  width: 18%;
-  margin-left: 53%;
-  padding-top: 2%;
-}
-.form__background .form_contact .form .input_form input {
-  margin-bottom: 10%;
-  padding: 5%;
-}
-.form__background .form_contact .form .message_form {
-  margin-left: 24%;
-  margin-bottom: 2%;
-}
-.form__background .form_contact .form .message_form textarea {
-  max-width: 190px;
-  width: 190px;
-  padding: 1.3%;
-}
-.form__background .form_contact .form .input_submit {
-  margin-left: 24%;
-  padding: 1% 3%;
+.form__background .input_submit {
+  border: 3px solid #F9D0A4;
   cursor: pointer;
 }
-.form__background .form_contact .form .input_submit:hover {
+.form__background .input_submit:hover {
   transform: scale(1.1);
 }
-.form__background .form_contact .form .border_input_form {
-  border-radius: 20px;
+.form__background .border_input_form {
   background-color: #FFEFD5;
 }
-.form__background .form_contact .form .border_input_form:hover {
+.form__background .border_input_form:hover {
   background-color: #F9D0A4;
+}
+.form__background .input_valid:valid {
+  box-shadow: 0 0 6px 1px #7eff7d;
+}
+.form__background .input_valid:invalid {
+  box-shadow: 0 0 6px 1px #f93c3c;
 }
 
 .bloc_checklists {
@@ -459,72 +433,6 @@ body {
 .spotsId .collapse__regulation .regulation .close {
   transform: translateY(-100%);
   display: none;
-}
-
-.myShop {
-  align-items: center;
-}
-.myShop .myShop__banner {
-  background-image: url("../assets/boutique.jpg");
-  color: #ffffff;
-  width: 70%;
-  height: 430px;
-  background-size: cover;
-  border-radius: 2.5rem;
-  margin: auto;
-}
-.myShop .myShop__banner .myShop__title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 21% 0 0 26%;
-  color: #FFC17F;
-}
-.myShop .myShop__banner .myShop__title h1 {
-  font-size: 42px;
-  text-decoration: underline;
-}
-.myShop .myShop__flex__cart .grid__myShop {
-  padding: 1% 5%;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 40px;
-  gap: 1.1rem;
-}
-.myShop .myShop__flex__cart .grid__myShop .card__myShop {
-  background-color: #ffffff;
-  box-shadow: 1px 0px 10px 4px #aeaeae;
-  border-radius: 25px;
-  margin: 4% 0;
-  width: 24%;
-  cursor: pointer;
-}
-.myShop .myShop__flex__cart .grid__myShop .card__myShop a {
-  text-decoration: none;
-}
-.myShop .myShop__flex__cart .grid__myShop .card__myShop a img {
-  width: 100%;
-  height: 240px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-.myShop .myShop__flex__cart .grid__myShop .card__myShop a .card__myShop__text {
-  padding: 2% 5%;
-  color: #ffffff;
-  background-color: #ffc17f;
-  height: 165px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-.myShop .myShop__flex__cart .grid__myShop .card__myShop a .card__myShop__text h2 {
-  font-weight: normal;
-}
-.myShop .myShop__flex__cart .grid__myShop .card__myShop a .card__myShop__text p {
-  font-size: 18px;
-  margin: 4% 0;
-}
-.myShop .myShop__flex__cart .grid__myShop .card__myShop a:hover {
-  transform: scale(1.05);
 }
 
 .article__header {

@@ -163,7 +163,7 @@
           "Checklist"
         ],
         "summary": "Add a new checklist",
-        "description": "Add a new checklist",
+        "description": "Add a new checklist. Path allowed only for Admin.",
         "requestBody": {
           "description": "Create a new checklist",
           "content": {
@@ -182,7 +182,7 @@
         },
         "responses": {
           "201": {
-            "description": "Created. New checklist created.",
+            "description": "Created. New checklist created",
             "content": {
               "application/json": {
                 "schema": {
@@ -191,7 +191,14 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:checklist"
+            ]
+          }
+        ]
       }
     },
     "/checklist/{checklistId}": {
@@ -235,7 +242,7 @@
           "Checklist"
         ],
         "summary": "Update checklist",
-        "description": "Update a single checklist",
+        "description": "Update a single checklist. Path allowed only for Admin.",
         "operationId": "updateChecklist",
         "parameters": [
           {
@@ -263,14 +270,21 @@
           "404": {
             "description": "Checklist not found."
           }
-        }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:checklist"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
           "Checklist"
         ],
         "summary": "Delete checklist",
-        "description": "Delete a single checklist",
+        "description": "Delete a single checklist. Path allowed only for Admin.",
         "operationId": "deleteChecklist",
         "parameters": [
           {
@@ -298,7 +312,14 @@
           "404": {
             "description": "Checklist not found."
           }
-        }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:checklist"
+            ]
+          }
+        ]
       }
     },
     "/spot": {
@@ -327,7 +348,7 @@
           "Spot"
         ],
         "summary": "Add a new spot",
-        "description": "Add a new spot",
+        "description": "Add a new spot. Path allowed only for Admin.",
         "operationId": "addSpot",
         "requestBody": {
           "description": "Create a new spot",
@@ -356,7 +377,14 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:spot"
+            ]
+          }
+        ]
       }
     },
     "/spot/{spotId}": {
@@ -400,7 +428,7 @@
           "Spot"
         ],
         "summary": "Update spot",
-        "description": "Update a single spot",
+        "description": "Update a single spot. Path allowed only for Admin.",
         "operationId": "updateSpot",
         "parameters": [
           {
@@ -428,14 +456,21 @@
           "404": {
             "description": "Spot not found."
           }
-        }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:spot"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
           "Spot"
         ],
         "summary": "Delete spot",
-        "description": "Delete a single spot",
+        "description": "Delete a single spot. Path allowed only for Admin.",
         "operationId": "deleteSpot",
         "parameters": [
           {
@@ -463,7 +498,14 @@
           "404": {
             "description": "Spot not found."
           }
-        }
+        },
+        "security": [
+          {
+            "auth": [
+              "write:spot"
+            ]
+          }
+        ]
       }
     },
     "/material": {
@@ -854,6 +896,19 @@
           "content": {
             "type": "string",
             "example": "Rule"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "auth": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "http://localhost:3000/auth",
+            "scopes": {
+              "write": "modify elements"
+            }
           }
         }
       }

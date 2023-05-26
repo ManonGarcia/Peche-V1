@@ -6,12 +6,14 @@ function CardSpots() {
     useEffect(fetchDescription, []);
 
     function fetchDescription() {
-        fetch('http://localhost:3001/spots')
+        fetch('http://localhost:3001/spot', {
+            type: "GET",
+        })
             .then((res) => res.json())
             .then((res) => setSpots(res))
             .catch(console.error);
     };
-
+    console.log(spots)
     return (
         <div className="spots">
             <div className="banner__spots">
@@ -19,7 +21,7 @@ function CardSpots() {
             </div>
             <div className="grid__spots">
                 {spots.map((spot, key) => (
-                    <FishingSpot key={key} name={spot.name} imgUrl={spot.picture} id={spot.id}/>
+                    <FishingSpot key={key} name={spot.name} imgUrl={spot.banner} id={spot.id}/>
                 ))}
             </div>
         </div>

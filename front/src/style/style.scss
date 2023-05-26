@@ -225,50 +225,13 @@ body {
     background-image: url("https://img.freepik.com/photos-gratuite/articles-peche-peche-filature-ligne-peche-crochets-leurres-fond-bois_639032-1829.jpg?w=996&t=st=1679952889~exp=1679953489~hmac=0282d4b267272d2c34068784d336f167efc4dca2988e6327d3c2896888483696");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
     height: 700px;
     margin: 1% 0;
-
-    .form_contact {
-        text-align: center;
-        margin: 2% 0;
-        padding: 8% 20% 12% 0;
-        background-image: url("../assets/pngegg.png");
-        background-repeat: no-repeat;
-        background-position: center;
-    
-        .title_form {
-            padding-top: 8%;
-            margin-left: 24%;
-        }
-    
-        .form {
-            .input_form {
-                display: flex;
-                flex-direction: column;
-                width: 18%;
-                margin-left: 53%;
-                padding-top: 2%;
-    
-                & input {
-                    margin-bottom: 10%;
-                    padding: 5%;
-                }
-            }
-    
-            .message_form {
-                margin-left: 24%;
-                margin-bottom: 2%;
-    
-                & textarea {
-                    max-width: 190px;
-                    width: 190px;
-                    padding: 1.3%;
-                }
-            }
+    color: #FFFFFF;
     
             .input_submit {
-                margin-left: 24%;
-                padding: 1% 3%;
+                border: 3px solid #F9D0A4;
                 cursor: pointer;
     
                 &:hover {
@@ -277,15 +240,19 @@ body {
             }
     
             .border_input_form {
-                border-radius: 20px;
                 background-color: #FFEFD5;
                 
                 &:hover {
                     background-color: #F9D0A4;
                 }
             }
-        }
-    }
+        
+            .input_valid:valid {
+                box-shadow: 0 0 6px 1px #7eff7d;
+            }
+            .input_valid:invalid {
+                box-shadow: 0 0 6px 1px #f93c3c;
+            }
 }
 
 .bloc_checklists {
@@ -529,83 +496,7 @@ body {
     }
 }
 
-.myShop {
-    align-items: center;
 
-    .myShop__banner {
-        background-image: url("../assets/boutique.jpg");
-        color: #ffffff;
-        width: 70%;
-        height: 430px;
-        background-size: cover;
-        border-radius: 2.5rem;
-        margin: auto;
-
-        .myShop__title {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 21% 0 0 26%;
-            color: #FFC17F;
-
-            & h1 {
-                font-size: 42px;
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .myShop__flex__cart {
-        .grid__myShop {
-            padding: 1% 5%;
-            display: flex;
-            flex-wrap: wrap;
-            border-radius: 40px;
-            gap: 1.1rem;
-    
-            .card__myShop {
-                background-color: #ffffff;
-                box-shadow: 1px 0px 10px 4px #aeaeae;
-                border-radius: 25px;
-                margin: 4% 0;
-                width: 24%;
-                cursor: pointer;
-
-                & a {
-                    text-decoration: none;
-
-                    & img {
-                        width: 100%;
-                        height: 240px;
-                        border-top-left-radius: 25px;
-                        border-top-right-radius: 25px;
-                    }
-        
-                    .card__myShop__text {
-                        padding: 2% 5%;
-                        color: #ffffff;
-                        background-color: #ffc17f;
-                        height: 165px;
-                        border-bottom-left-radius: 25px;
-                        border-bottom-right-radius: 25px;
-    
-                        & h2 {
-                            font-weight: normal;
-                        }
-                        & p {
-                            font-size: 18px;
-                            margin: 4% 0;
-                        }
-                    }
-        
-                    &:hover {
-                        transform: scale(1.05);
-                    }
-                }
-            }
-        }
-    }
-}
 
 .article__header {
     width: 80%;
@@ -695,5 +586,6 @@ body {
         }
     }
 }
+
 
 /**/

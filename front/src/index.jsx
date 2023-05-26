@@ -13,6 +13,7 @@ import Checklists from "./Pages/Checklists";
 import "./style/style.css";
 import Shopping from "./Pages/Shop";
 import ArticleId from "./componants/CardOfMyShop/article";
+import AuthAdmin  from "./Pages/Auth/index";
 
 const MainTemplate = () => {
     return (
@@ -59,6 +60,10 @@ const Router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            {
+                path: "/admin/auth",
+                element: <AuthAdmin />,
             }
         ]
     }
