@@ -1,4 +1,5 @@
 version: '3.9'
+
 services:
   db:
     # container_name: pg_container
@@ -9,7 +10,7 @@ services:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: peche
     ports:
-      - "5433:5432"
+      - "5436:5432"
   # pgadmin:
   #   # container_name: pgadmin4_container
   #   image: dpage/pgadmin4
@@ -21,5 +22,22 @@ services:
   #     - "5051:80"
   back:
     build: ./back
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./back:/usr/src/app
+      - back_node_modules:/usr/src/app/node_modules
+    env_file:
+      - ./back/.env
+
   front:
     build: ./front
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front:/usr/src/app
+      - front_node_modules:/usr/src/app/node_modules
+
+volumes:
+  back_node_modules:
+  front_node_modules:
