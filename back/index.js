@@ -17,6 +17,9 @@ const material = require('./routes/material');
 const fish = require('./routes/fish');
 const rule = require('./routes/rule');
 
+const descriptionPanel = require('./data/descriptionPanel.json');
+const whatElse = require('./data/whatElsePanel.json');
+
 /************************************ */
 app.use(cors());
 app.use(express.json());
@@ -26,14 +29,18 @@ app.use(express.urlencoded({ extended: true }));
 /************************************ */
 app.get('/', (req, res) => res.send("I'm online !"));
 
-app.use('/api/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use('/api/admin', auth_admin);
-app.use('/api/checklist', checklist);
-app.use('/api/spot', spot);
-app.use('/api/material', material);
-app.use('/api/fish', fish);
-app.use('/api/rule', rule);
+app.use('/admin', auth_admin);
+app.use('/checklist', checklist);
+app.use('/spot', spot);
+app.use('/material', material);
+app.use('/fish', fish);
+app.use('/rule', rule);
+
+app.get('/panel', (req, res) => res.send(descriptionPanel));
+app.get('/whatelse', (req, res) => res.send(whatElse));
+
 
 app.get('*', (req, res) => res.status(501).send('Error !'));
 
